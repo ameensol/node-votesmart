@@ -15,5 +15,8 @@ var votesmart = new VoteSmart(apiKey);
 
 // votesmart.npat('26732', function(err, json) {
 //   if (err) throw err;
-//   console.log(json);
+//   // console.log(json);
+//   json.npat.section.forEach(function(e) {
+//     console.log(e);
+//   })
 // });

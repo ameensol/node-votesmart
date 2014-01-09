@@ -33,13 +33,10 @@ VoteSmart.prototype.createOptions = function(method, params, key) {
 VoteSmart.prototype.executeRequest = function(options, callback) {
   // executes the HTTP request with the given options
 
-  console.log(options.url);
   request(options, function(err, res, body) {
     if (!err && res.statusCode == 200) {
-      console.log('success');
       callback(null, JSON.parse(body));
     } else {
-      console.log('failure');
       callback(new Error('Request failed with ' + res.statusCode));
     }
   });
